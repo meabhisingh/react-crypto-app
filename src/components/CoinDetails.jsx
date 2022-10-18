@@ -113,7 +113,11 @@ const CoinDetails = () => {
 
           <HStack p="4" overflowX={"auto"}>
             {btns.map((i) => (
-              <Button key={i} onClick={() => switchChartStats(i)}>
+              <Button
+                disabled={days === i}
+                key={i}
+                onClick={() => switchChartStats(i)}
+              >
                 {i}
               </Button>
             ))}
